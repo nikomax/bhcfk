@@ -14,6 +14,8 @@
 	+laptop
 		margin-top: 90px
 		max-width: none
+	+sm
+		padding: 15px
 	&__name
 		font-size: $textFontSize
 		margin-bottom: 10px
@@ -30,11 +32,17 @@
 			height: 160px
 			width: 160px
 			margin-top: -130px
+		+sm
+			height: 100px
+			width: 100px
+			margin-top: -80px
 	&__photo
 		+coverdiv
 		overflow: hidden
 		border-radius: 50%
 		border: 15px solid #ffffff
+		+sm
+			border-width: 4px
 		img
 			height: 100%
 			width: 100%
@@ -53,8 +61,13 @@
 		+laptop
 			height: 60px
 			width: 60px
+		+sm
+			height: 30px
+			width: 30px
 		.icon
 			font-size: 40px
+			+sm
+				font-size: 20px
 		.red &
 			background-color: $sectionRed
 		.orange &
@@ -84,14 +97,24 @@
 			+laptop
 				height: 200px
 				width: 200px
+			+sm
+				height: 140px
+				width: 140px
 		#{$this}__name
 			font-size: 50px
+			+sm
+				font-size: 20px
 		#{$this}__icon
 			height: 103px
 			width: 103px
 			+laptop
 				height: 80px
 				width: 80px
+			+sm
+				height: 40px
+				width: 40px
 			.icon
 				font-size: 50px
+				+sm
+					font-size: 20px
 
