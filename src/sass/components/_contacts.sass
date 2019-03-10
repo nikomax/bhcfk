@@ -1,6 +1,8 @@
 .contacts
 	padding: 400px 0 0
 	position: relative
+	+sm
+		padding: 160px 0 0
 	&__deco
 		z-index: -1
 		position: absolute
@@ -8,6 +10,9 @@
 		transform: translate(-35%, -43%)
 		left: 50%
 		width: 1800px
+		+sm
+			transform: translate(-35%, -37%)
+			width: 450px
 		img
 			width: 100%
 	&__info
@@ -18,12 +23,21 @@
 		justify-content: center
 		.btn + .btn
 			margin-left: 70px
+			+md
+				margin-left: 40px
+			+sm
+				margin-left: 15px
 	&__map
 		position: relative
 		z-index: -1
 		width: 100%
 		margin-top: -290px
 		margin-bottom: 400px
+		+laptop
+			margin-bottom: 100px
+		+sm
+			margin-top: 0
+			margin-bottom: 10px
 		img
 			width: 100%
 
@@ -31,16 +45,34 @@
 	margin: 60px 0
 	display: flex
 	align-items: center
+	+md
+		margin: 40px 0
+	+sm
+		align-items: flex-start
+		margin: 15px 0
 	&__title
 		width: 50%
 		font-family: $boldFont
 		font-size: 40px
 		text-align: right
 		padding-right: 10px
+		+laptop
+			width: 30%
+		+md
+			font-size: 30px
+		+sm
+			font-size: 10px
 	&__text
 		width: 50%
 		font-size: 36px
 		padding-left: 10px
+		+laptop
+			width: 70%
+		+md
+			font-size: 26px
+		+sm
+			font-size: 9px
+			padding-left: 0
 		a
 			color: inherit
 			&:not(.info-link)

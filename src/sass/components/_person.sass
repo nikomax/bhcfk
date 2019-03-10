@@ -11,16 +11,25 @@
 	border: 1px solid #4FA3DC
 	padding: 30px
 	border-radius: 20px
+	+laptop
+		margin-top: 90px
+		max-width: none
 	&__name
 		font-size: $textFontSize
 		margin-bottom: 10px
 		font-family: $boldFont
 		text-align: center
+		+laptop
+			font-size: $textFontSizeLaptop
 	&__photo-wrapper
 		width: 320px
 		height: 320px
 		position: relative
 		margin-top: -190px
+		+laptop
+			height: 160px
+			width: 160px
+			margin-top: -130px
 	&__photo
 		+coverdiv
 		overflow: hidden
@@ -41,6 +50,9 @@
 		display: flex
 		justify-content: center
 		align-items: center
+		+laptop
+			height: 60px
+			width: 60px
 		.icon
 			font-size: 40px
 		.red &
@@ -64,14 +76,22 @@
 	&--modal
 		width: 100%
 		max-width: none
+		+laptop
+			max-width: none
 		#{$this}__photo-wrapper
 			height: 378px
 			width: 378px
+			+laptop
+				height: 200px
+				width: 200px
 		#{$this}__name
 			font-size: 50px
 		#{$this}__icon
 			height: 103px
 			width: 103px
+			+laptop
+				height: 80px
+				width: 80px
 			.icon
 				font-size: 50px
 

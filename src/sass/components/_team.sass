@@ -4,6 +4,8 @@
 	position: relative
 	z-index: 1
 	overflow: hidden
+	+laptop
+		padding-top: 250px
 	&__deco
 		z-index: -1
 		position: absolute
@@ -11,11 +13,21 @@
 		transform: translate(-35%, -35%)
 		left: 50%
 		width: 1900px
+		+laptop
+			width: 1400px
+			transform: translate(-35%, -37%)
+		+sm
+			width: 450px
+			transform: translate(-33%,-23%)
 		img
 			width: 100%
 
 .team-section
 	margin: 115px 0
+	+laptop
+		margin: 50px 0
+	+sm
+		margin: 30px 0
 	&__title
 		font-size: $titleFontSizeMd
 		color: #ffffff
@@ -25,6 +37,13 @@
 		width: 78%
 		font-family: $boldFont
 		margin-bottom: 40px
+		+laptop
+			font-size: $titleFontSizeMdLaptop
+			padding: 10px 10px 15px 40px
+		+sm
+			padding: 5px 10px 8px 15px
+			font-size: $titleFontSizeMdMobile
+			margin-bottom: 23px
 		.red &
 			background-color: $sectionRed
 		.orange &
@@ -33,9 +52,16 @@
 			background-color: $sectionGreen
 	&__items
 		display: flex
-		margin: 74px -40px
+		flex-wrap: wrap
+		margin: 74px -40px 40px
+		+laptop
+			margin: 30px -40px
+		+sm
+			margin: 10px -17px
 	&__item
-		margin: 0 40px
+		margin: 0 35px 30px
+		+sm
+			margin: 0 10px 30px
 
 .team-item
 	display: flex
@@ -47,6 +73,10 @@
 		width: 205px
 		margin-top: 30px
 		font-size: $textFontSizeSm
+		+sm
+			font-size: $textFontSizeSmMobileTeam
+			width: 70px
+			margin-top: 9px
 
 .round-item
 	border-radius: 50%
@@ -56,19 +86,38 @@
 	display: flex
 	align-items: center
 	justify-content: center
+	+laptop
+		height: 140px
+		width: 140px
+	+sm
+		height: 65px
+		width: 65px
 	.icon
 		font-size: 125px
 		display: block
+		+laptop
+			font-size: 80px
+		+sm
+			font-size: 30px
 	.red &
 		background-color: $sectionRed
 	.orange &
 		background-color: $sectionOrange
 	.green &
 		background-color: $sectionGreen
+	.rose &
+		background-color: $sectionrose
 
 .persons
 	display: flex
 	margin: 0 -25px
 	flex-wrap: wrap
+	+sm
+		margin: 0
 	&__item
 		padding: 25px
+		+laptop
+			width: 50%
+		+sm
+			width: 100%
+			padding: 0

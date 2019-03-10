@@ -8,15 +8,37 @@
 	color: $buttonColor
 	text-decoration: none
 	font-family: $boldFont
+	white-space: nowrap
+	+laptop
+		font-size: $btnFontSizeLaptop
+	+sm
+		font-size: $btnFontSizeSmMobile
+		border-width: 3px
+		border-radius: 10px
+		padding: 10px
 	&--sm
 		font-size: $btnFontSizeSm
 		padding: 10px 15px
 		border-width: 4px
 		border-radius: 20px
+		+laptop
+			font-size: $btnFontSizeSmLaptop
+		+sm
+			font-size: $btnFontSizeSmMobile
+			border-radius: 5px
+			border-width: 2px
+			padding: 3px 5px
 	&--lg
 		padding: 25px
 		min-width: 390px
 		font-size: $btnFontSizeLg
+		+laptop
+			font-size: $btnFontSizeLgLaptop
+		+md
+			min-width: 200px
+		+sm
+			min-width: 112px
+			font-size: $btnFontSizeSmMobile
 	&--blue-border
 		border-color: $buttonBorderColorBlue
 	&--green-border
@@ -35,7 +57,11 @@
 	width: 89px
 	img
 		width: 100%
+	+sm
+		width: 26px
 
 .info-link
 	font-size: 24px
 	color: inherit
+	+sm
+		font-size: 8px
