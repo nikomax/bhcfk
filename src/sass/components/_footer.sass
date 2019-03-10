@@ -1,0 +1,31 @@
+.footer
+	z-index: 9
+	position: fixed
+	bottom: 0
+	left: 0
+	width: 100%
+	color: #ffffff
+	font-family: $boldFont
+	text-align: center
+	padding-bottom: 25px
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 25px
+		background: linear-gradient(to right, #E272AC 0%, #CF8E95 10%, #BCAA7E 20%, #A8C567 30%, #96CD74 40%, #84CB91 50%, #72C9AF 60%, #6FC3BB 70%, #9CB18A 80%, #C99F59 90%, #F68D29 100%)
+	a
+		color: inherit
+		text-decoration: none
+	&__inner
+		font-size: $textFontSizeSm
+		padding: 10px
+		background-color: $footerBg
+	&__buttons
+		display: flex
+		justify-content: center
+		margin-bottom: 30px
+		.btn:not(:last-child)
+			margin-right: 20px

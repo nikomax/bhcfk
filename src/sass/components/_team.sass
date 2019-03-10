@@ -1,0 +1,74 @@
+.team
+	padding-top: 500px
+	margin-top: -100px
+	position: relative
+	z-index: 1
+	overflow: hidden
+	&__deco
+		z-index: -1
+		position: absolute
+		top: 0
+		transform: translate(-35%, -35%)
+		left: 50%
+		width: 1900px
+		img
+			width: 100%
+
+.team-section
+	margin: 115px 0
+	&__title
+		font-size: $titleFontSizeMd
+		color: #ffffff
+		background-color: $sectionBlue
+		padding: 13px 10px 21px 150px
+		border-radius: 0 50px 50px 0
+		width: 78%
+		font-family: $boldFont
+		margin-bottom: 40px
+		.red &
+			background-color: $sectionRed
+		.orange &
+			background-color: $sectionOrange
+		.green &
+			background-color: $sectionGreen
+	&__items
+		display: flex
+		margin: 74px -40px
+	&__item
+		margin: 0 40px
+
+.team-item
+	display: flex
+	flex-direction: column
+	align-items: center
+	cursor: pointer
+	&__title
+		text-align: center
+		width: 205px
+		margin-top: 30px
+		font-size: $textFontSizeSm
+
+.round-item
+	border-radius: 50%
+	height: 205px
+	width: 205px
+	background-color: $sectionBlue
+	display: flex
+	align-items: center
+	justify-content: center
+	.icon
+		font-size: 125px
+		display: block
+	.red &
+		background-color: $sectionRed
+	.orange &
+		background-color: $sectionOrange
+	.green &
+		background-color: $sectionGreen
+
+.persons
+	display: flex
+	margin: 0 -25px
+	flex-wrap: wrap
+	&__item
+		padding: 25px

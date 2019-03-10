@@ -1,0 +1,47 @@
+.contacts
+	padding: 400px 0 0
+	position: relative
+	&__deco
+		z-index: -1
+		position: absolute
+		top: 0
+		transform: translate(-35%, -43%)
+		left: 50%
+		width: 1800px
+		img
+			width: 100%
+	&__info
+		max-width: 1200px
+		margin: 0 auto
+	&__buttons
+		display: flex
+		justify-content: center
+		.btn + .btn
+			margin-left: 70px
+	&__map
+		position: relative
+		z-index: -1
+		width: 100%
+		margin-top: -290px
+		margin-bottom: 400px
+		img
+			width: 100%
+
+.c-item
+	margin: 60px 0
+	display: flex
+	align-items: center
+	&__title
+		width: 50%
+		font-family: $boldFont
+		font-size: 40px
+		text-align: right
+		padding-right: 10px
+	&__text
+		width: 50%
+		font-size: 36px
+		padding-left: 10px
+		a
+			color: inherit
+			&:not(.info-link)
+				text-decoration: none

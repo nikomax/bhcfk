@@ -1,0 +1,77 @@
+.person
+	$this: &
+	margin-top: 160px
+	max-width: 505px
+	width: 100%
+	text-decoration: none
+	color: $textColor
+	display: flex
+	flex-direction: column
+	align-items: center
+	border: 1px solid #4FA3DC
+	padding: 30px
+	border-radius: 20px
+	&__name
+		font-size: $textFontSize
+		margin-bottom: 10px
+		font-family: $boldFont
+		text-align: center
+	&__photo-wrapper
+		width: 320px
+		height: 320px
+		position: relative
+		margin-top: -190px
+	&__photo
+		+coverdiv
+		overflow: hidden
+		border-radius: 50%
+		border: 15px solid #ffffff
+		img
+			height: 100%
+			width: 100%
+			object-fit: cover
+	&__icon
+		height: 88px
+		width: 88px
+		position: absolute
+		bottom: 0
+		right: 0
+		border-radius: 50%
+		background-color: $sectionBlue
+		display: flex
+		justify-content: center
+		align-items: center
+		.icon
+			font-size: 40px
+		.red &
+			background-color: $sectionRed
+		.orange &
+			background-color: $sectionOrange
+		.green &
+			background-color: $sectionGreen
+	&__desc
+		font-size: $textFontSizeXs
+		&--full
+			max-height: 320px
+			overflow: auto
+			max-width: 1100px
+			margin: 0 auto
+			p + p
+				margin-top: 20px
+	&__link
+		align-self: flex-start
+		margin-top: 30px
+	&--modal
+		width: 100%
+		max-width: none
+		#{$this}__photo-wrapper
+			height: 378px
+			width: 378px
+		#{$this}__name
+			font-size: 50px
+		#{$this}__icon
+			height: 103px
+			width: 103px
+			.icon
+				font-size: 50px
+
