@@ -117,6 +117,9 @@
 		margin: 0
 	&__item
 		padding: 25px
+		&:not(:last-child)
+			+sm
+				margin-bottom: 30px
 		+laptop
 			width: 50%
 		+sm
