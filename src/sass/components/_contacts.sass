@@ -30,16 +30,21 @@
 	&__map
 		position: relative
 		z-index: -1
-		width: 100%
 		margin-top: -290px
 		margin-bottom: 400px
+		padding-top: 50%
 		+laptop
 			margin-bottom: 100px
+			margin-top: -240px
 		+sm
 			margin-top: 0
 			margin-bottom: 10px
+		+xs
+			padding-top: 80%
+			margin: 0 -20px 10px
 		img
-			width: 100%
+			+coverdiv
+			object-fit: cover
 
 .c-item
 	margin: 60px 0

@@ -1,5 +1,10 @@
+\:root
+	--app-height: 100vh
+
+
 .hero
 	height: 100vh
+	height: var(--app-height)
 	position: relative
 	z-index: 1
 	padding: 65px 150px
@@ -12,6 +17,7 @@
 		+coverdiv
 	&__slide
 		height: 100vh
+		height: var(--app-height)
 		background-position: center
 		background-size: cover
 		background-repeat: no-repeat
