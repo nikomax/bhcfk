@@ -8,58 +8,68 @@
     </div>
   </div>
   <h2 class="section-title section-title--center">Our Dedicated Team</h2>
-
+  <div class="container">
+    <div class="text">
+      <p>Our team consists of carefully selected highly skilled paediatric specialists and allied health professionals,
+        experienced paediatric nurses who all excel in their respective fields and work seamlessly together sharing our
+        vision to deliver all-inclusive paediatric treatments in a friendly, supportive and safe environment.</p>
+    </div>
+  </div>
   {% for item in team %}
-    <div class="team-section {{item.mod}}">
-      <div class="team-section__title">{{item.title}}</div>
-      <div class="container js-tabs">
-        <div class="team-section__items">
-          {% for subitem in item.list %}
-            <div class="team-section__item">
-              <div class="tab__title js-tab-title" data-tab="{{loop.index}}">
-                <div class="team-item">
-                  <div class="team-item__icon round-item">
-                    <svg class="icon icon-{{subitem.icon}}"><use xlink:href="img/sprite.svg#icon-{{subitem.icon}}"></use></svg>
+  <div class="team-section {{item.mod}}">
+    <div class="team-section__title">{{item.title}}</div>
+    <div class="container js-tabs">
+      <div class="team-section__items">
+        {% for subitem in item.list %}
+        <div class="team-section__item">
+          <div class="tab__title js-tab-title" data-tab="{{loop.index}}">
+            <div class="team-item">
+              <div class="team-item__icon round-item">
+                <svg class="icon icon-{{subitem.icon}}">
+                  <use xlink:href="img/sprite.svg#icon-{{subitem.icon}}"></use>
+                </svg>
+              </div>
+              <div class="team-item__title">{{subitem.title | safe}}</div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="team-section__content">
+        {% for subitem in item.list %}
+        <div class="tab js-tab" data-tab="{{loop.index}}">
+          <div class="persons">
+            {% for person in subitem.list %}
+            <div class="persons__item">
+              <a href="#"
+                 class="person js-modal-link"
+                 data-person-photo="{{person.photo}}"
+                 data-person-name="{{person.name}}"
+                 data-person-desc="{{person.fulldesc | safe}}"
+                 data-person-icon="{{subitem.icon}}"
+                 data-person-color="{{item.mod}}"
+              >
+                <div class="person__photo-wrapper">
+                  <div class="person__photo">
+                    <img src="{{person.photo}}" alt="{{person.name}}">
                   </div>
-                  <div class="team-item__title">{{subitem.title | safe}}</div>
+                  <div class="person__icon">
+                    <svg class="icon icon-{{subitem.icon}}">
+                      <use xlink:href="img/sprite.svg#icon-{{subitem.icon}}"></use>
+                    </svg>
+                  </div>
                 </div>
-              </div>
+                <div class="person__name">{{person.name}}</div>
+                <div class="person__desc">{{person.shortinfo}}</div>
+                <div class="person__link">Learn More</div>
+              </a>
             </div>
-          {% endfor %}
+            {% endfor %}
+          </div>
         </div>
-        <div class="team-section__content">
-          {% for subitem in item.list %}
-            <div class="tab js-tab" data-tab="{{loop.index}}">
-              <div class="persons">
-                {% for person in subitem.list %}
-                <div class="persons__item">
-                  <a href="#"
-                     class="person js-modal-link"
-                     data-person-photo="{{person.photo}}"
-                     data-person-name="{{person.name}}"
-                     data-person-desc="{{person.fulldesc | safe}}"
-                     data-person-icon="{{subitem.icon}}"
-                     data-person-color="{{item.mod}}"
-                  >
-                    <div class="person__photo-wrapper">
-                      <div class="person__photo">
-                        <img src="{{person.photo}}" alt="{{person.name}}">
-                      </div>
-                      <div class="person__icon">
-                        <svg class="icon icon-{{subitem.icon}}"><use xlink:href="img/sprite.svg#icon-{{subitem.icon}}"></use></svg>
-                      </div>
-                    </div>
-                      <div class="person__name">{{person.name}}</div>
-                      <div class="person__desc">{{person.shortinfo}}</div>
-                      <div class="person__link">Learn More</div>
-                  </a>
-                </div>
-                {% endfor %}
-              </div>
-            </div>
-          {% endfor %}
-        </div>
+        {% endfor %}
       </div>
     </div>
+  </div>
   {% endfor %}
 </section>

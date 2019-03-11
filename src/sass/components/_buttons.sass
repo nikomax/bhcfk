@@ -1,4 +1,5 @@
 .btn
+	text-align: center
 	display: inline-block
 	background-color: $mainButtonBg
 	border: 7px solid $buttonBorderColor
@@ -12,7 +13,7 @@
 	+laptop
 		font-size: $btnFontSizeLaptop
 	+sm
-		font-size: $btnFontSizeSmMobile
+		font-size: $btnFontSizeMobile
 		border-width: 3px
 		border-radius: 10px
 		padding: 10px
@@ -24,10 +25,12 @@
 		+laptop
 			font-size: $btnFontSizeSmLaptop
 		+sm
-			font-size: $btnFontSizeSmMobile
+			font-size: $btnFontSizeMobile
 			border-radius: 5px
 			border-width: 2px
 			padding: 3px 5px
+		+r(375)
+			font-size: $btnFontSizeSmMobile
 	&--lg
 		padding: 25px
 		min-width: 390px
@@ -38,7 +41,7 @@
 			min-width: 200px
 		+sm
 			min-width: 112px
-			font-size: $btnFontSizeSmMobile
+			font-size: $btnFontSizeMobile
 	&--blue-border
 		border-color: $buttonBorderColorBlue
 	&--green-border
