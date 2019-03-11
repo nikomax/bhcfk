@@ -13,10 +13,17 @@
            data-slick='{
        "slidesToShow": 1,
        "slidesToScroll": 1,
-       "autoplay": true,
        "rows": 0,
-       "arrows": false,
-       "autoplaySpeed": 2000}'
+       "dots": true,
+       "responsive": [
+          {
+          "breakpoint": 768,
+            "settings": {
+              "arrows": false
+            }
+          }
+        ]
+       }'
       >
         <div class="desc-section__slide" style="background-image: url(img/reception.jpg)"></div>
         <div class="desc-section__slide" style="background-image: url(img/conference.jpg)"></div>

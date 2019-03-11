@@ -11,6 +11,12 @@ tabBtn.on('click', (e) => {
     tabBtn.removeClass('is-active');
     tabs.slideUp();
     $(e.currentTarget).addClass('is-active');
-    parent.find(`.js-tab[data-tab="${index}"]`).slideDown();
+    const activeTab = parent.find(`.js-tab[data-tab="${index}"]`);
+    const activeContent = parent.find('.js-tab-content');
+    activeTab.slideDown();
+    setTimeout(() => {
+      $('html, body').animate({scrollTop: activeContent.offset().top}, 500);
+    }, 100)
+
   }
 });

@@ -4,6 +4,8 @@
 	position: relative
 	z-index: 1
 	overflow: hidden
+	+r(1700)
+		padding-top: 300px
 	+laptop
 		padding-top: 150px
 		margin-top: 0
@@ -14,6 +16,9 @@
 		transform: translate(-35%, -35%)
 		left: 50%
 		width: 1900px
+		+r(1700)
+			width: 1600px
+			transform: translate(-40%, -38%)
 		+laptop
 			width: 1400px
 			transform: translate(-35%, -37%)
@@ -54,16 +59,26 @@
 	&__items
 		display: flex
 		flex-wrap: wrap
-		justify-content: space-around
+		//justify-content: space-around
 		margin: 74px -40px 40px
 		+laptop
 			margin: 30px -40px
 		+sm
 			margin: 10px -17px
 	&__item
-		margin: 0 35px 30px
+		width: 16%
+		padding: 0 35px 30px
+		+r(1300)
+			width: 20%
+		+md
+			width: 33.33%
 		+sm
-			margin: 0 10px 30px
+			padding: 0 10px 30px
+			width: 16%
+		+r(635)
+			width: 20%
+		+r(500)
+			width: 33.33%
 
 .team-item
 	display: flex
@@ -80,6 +95,22 @@
 			font-size: $textFontSizeSmMobileTeam
 			width: 70px
 			margin-top: 9px
+	&__icon
+		.icon
+			font-size: 125px
+			display: block
+			+laptop
+				font-size: 80px
+			+sm
+				font-size: 37px
+		&--icon-big
+			.icon
+				+sm
+					font-size: 46px!important
+		&--icon-small
+			.icon
+				+sm
+					font-size: 28px!important
 
 .round-item
 	border-radius: 50%
@@ -89,19 +120,19 @@
 	display: flex
 	align-items: center
 	justify-content: center
-	+laptop
+	+r(1700)
 		height: 140px
 		width: 140px
 	+sm
 		height: 65px
 		width: 65px
 	.icon
-		font-size: 125px
+		font-size: 110px
 		display: block
-		+laptop
-			font-size: 80px
+		+r(1700)
+			font-size: 70px
 		+sm
-			font-size: 30px
+			font-size: 37px
 	.red &
 		background-color: $sectionRed
 	.orange &
@@ -119,6 +150,7 @@
 		margin: 0
 	&__item
 		padding: 25px
+		width: 33.33%
 		&:not(:last-child)
 			+sm
 				margin-bottom: 30px

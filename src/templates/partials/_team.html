@@ -24,7 +24,7 @@
         <div class="team-section__item">
           <div class="tab__title js-tab-title" data-tab="{{loop.index}}">
             <div class="team-item">
-              <div class="team-item__icon round-item">
+              <div class="team-item__icon {% if subitem.iconBig %}team-item__icon--icon-big{% endif %}{% if subitem.iconSmall %}team-item__icon--icon-small{% endif %} round-item ">
                 <svg class="icon icon-{{subitem.icon}}">
                   <use xlink:href="img/sprite.svg#icon-{{subitem.icon}}"></use>
                 </svg>
@@ -35,7 +35,7 @@
         </div>
         {% endfor %}
       </div>
-      <div class="team-section__content">
+      <div class="team-section__content js-tab-content">
         {% for subitem in item.list %}
         <div class="tab js-tab" data-tab="{{loop.index}}">
           <div class="persons">

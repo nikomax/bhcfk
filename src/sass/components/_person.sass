@@ -1,7 +1,7 @@
 .person
 	$this: &
 	margin-top: 160px
-	max-width: 505px
+	//max-width: 505px
 	width: 100%
 	text-decoration: none
 	color: $textColor
@@ -11,6 +11,8 @@
 	border: 1px solid #4FA3DC
 	padding: 30px
 	border-radius: 20px
+	+r(1700)
+		margin-top: 120px
 	+laptop
 		margin-top: 90px
 		max-width: none
@@ -22,6 +24,8 @@
 		margin-bottom: 10px
 		font-family: $boldFont
 		text-align: center
+		+r(1700)
+			font-size: 30px
 		+laptop
 			font-size: $textFontSizeLaptop
 		+sm
@@ -31,6 +35,10 @@
 		height: 320px
 		position: relative
 		margin-top: -190px
+		+r(1700)
+			height: 240px
+			width: 240px
+			margin-top: -160px
 		+laptop
 			height: 160px
 			width: 160px
@@ -61,6 +69,9 @@
 		display: flex
 		justify-content: center
 		align-items: center
+		+r(1700)
+			height: 75px
+			width: 75px
 		+laptop
 			height: 60px
 			width: 60px
@@ -104,6 +115,9 @@
 		#{$this}__photo-wrapper
 			height: 378px
 			width: 378px
+			+r(1700)
+				height: 280px
+				width: 280px
 			+laptop
 				height: 200px
 				width: 200px
@@ -112,11 +126,16 @@
 				width: 140px
 		#{$this}__name
 			font-size: 50px
+			+r(1700)
+				font-size: 35px
 			+sm
 				font-size: 20px
 		#{$this}__icon
 			height: 103px
 			width: 103px
+			+r(1700)
+				height: 90px
+				width: 90px
 			+laptop
 				height: 80px
 				width: 80px

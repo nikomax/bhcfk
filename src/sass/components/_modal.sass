@@ -20,8 +20,11 @@
 		top: 50%
 		left: 50%
 		transform: translate(-50%, -50%)
-		+laptop
+		+r(1700)
+			max-width: 1000px
 			padding: 30px
+		+md
+			width: 80%
 		+sm
 			padding: 20px
 	&__close
@@ -36,10 +39,14 @@
 		font-size: 40px
 		height: 67px
 		width: 67px
+		+r(1700)
+			height: 40px
+			width: 40px
+			font-size: 20px
 		+sm
 			width: 30px
 			height: 30px
-			font-size: 20px
+			font-size: 10px
 			top: 20px
 			right: 20px
 		.icon
