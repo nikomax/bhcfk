@@ -1,9 +1,9 @@
-<section class="desc-section desc-section--first" id="clinic">
+<section class="desc-section desc-section--first">
   <div class="explore-deco">
     <img src="img/deco3.svg" alt="decoration">
   </div>
   <div class="container">
-    <div class="section-icon red">
+    <div class="section-icon red" id="clinic">
       <div class="round-item">
         {{mixins.icon('explore')}}
       </div>
@@ -14,15 +14,7 @@
        "slidesToShow": 1,
        "slidesToScroll": 1,
        "rows": 0,
-       "dots": true,
-       "responsive": [
-          {
-          "breakpoint": 768,
-            "settings": {
-              "arrows": false
-            }
-          }
-        ]
+       "dots": true
        }'
       >
         <div class="desc-section__slide" style="background-image: url(img/reception.jpg)"></div>

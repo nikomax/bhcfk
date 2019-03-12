@@ -24,6 +24,7 @@
 		font-size: $textFontSize
 		margin-bottom: 10px
 		font-family: $boldFont
+		font-weight: bold
 		text-align: center
 		+r(1700)
 			font-size: 30px
@@ -37,16 +38,12 @@
 		position: relative
 		margin-top: -190px
 		+r(1700)
-			height: 240px
-			width: 240px
-			margin-top: -160px
-		+laptop
-			height: 160px
-			width: 160px
+			height: 220px
+			width: 220px
 			margin-top: -130px
 		+sm
-			height: 100px
-			width: 100px
+			height: 150px
+			width: 150px
 			margin-top: -80px
 	&__photo
 		+coverdiv
@@ -91,8 +88,9 @@
 			background-color: $sectionGreen
 	&__desc
 		font-size: $textFontSizeXs
+		line-height: 1.6
 		+sm
-			font-size: $textFontSizeSmMobile
+			font-size: $personDescMobile
 		&--full
 			max-height: 320px
 			overflow: auto
@@ -106,8 +104,9 @@
 		align-self: flex-start
 		margin-top: 30px
 		+sm
-			font-size: $textFontSizeSmMobile
+			font-size: $personDescMobile
 			margin-top: 15px
+			text-decoration: underline
 	&--modal
 		width: 100%
 		max-width: none
