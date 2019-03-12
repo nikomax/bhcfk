@@ -21,17 +21,11 @@
 		padding: 15px
 		margin-top: 60px
 	&__name
-		font-size: $textFontSize
+		+css-lock($textFontSizeMobile, $textFontSize, 450, 2600)
 		margin-bottom: 10px
 		font-family: $boldFont
 		font-weight: bold
 		text-align: center
-		+r(1700)
-			font-size: 30px
-		+laptop
-			font-size: $textFontSizeLaptop
-		+sm
-			font-size: $textFontSizeMobile
 	&__photo-wrapper
 		width: 320px
 		height: 320px
@@ -87,10 +81,8 @@
 		.green &
 			background-color: $sectionGreen
 	&__desc
-		font-size: $textFontSizeXs
+		+css-lock($personDescMobile, $personDesc, 375, 1920)
 		line-height: 1.6
-		+sm
-			font-size: $personDescMobile
 		&--full
 			max-height: 320px
 			overflow: auto
@@ -103,8 +95,8 @@
 	&__link
 		align-self: flex-start
 		margin-top: 30px
+		+css-lock($personDescMobile, $personDesc, 375, 1920)
 		+sm
-			font-size: $personDescMobile
 			margin-top: 15px
 			text-decoration: underline
 	&--modal

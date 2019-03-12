@@ -14,22 +14,16 @@
 	&__title
 		font-family: $boldFont
 		font-weight: bold
-		font-size: $titleFontSizeSm
+		+css-lock($titleBannerMobile, $titleBanner, 375, 1920)
 		margin-bottom: 16px
-		+laptop
-			font-size: $titleFontSizeSmLaptop
 		+sm
-			font-size: $titleFontSizeSmMobile
 			margin-bottom: 24px
 	&__text
-		font-size: $textFontSize
+		+css-lock($textFontSizeMobile, $textFontSize, 375, 1920)
 		max-width: 1140px
 		margin: 0 auto
-		+laptop
-			font-size: $textFontSizeLaptop
 		+sm
 			line-height: 1.6
-			font-size: $textFontSizeMobile
 	&--philosophy
 		background-color: $philosophyBg
 		border-color: $philosophyBorder

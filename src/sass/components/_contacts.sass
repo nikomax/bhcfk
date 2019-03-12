@@ -4,7 +4,7 @@
 	+r(1700)
 		padding: 240px 0 0
 	+sm
-		padding: 160px 0 0
+		padding: 130px 0 0
 	&__deco
 		z-index: -1
 		position: absolute
@@ -61,27 +61,20 @@
 		margin: 15px 0
 	&__title
 		width: 50%
-		font-family: $boldFont
+		+css-lock($addressFontMobile, $addressTitles, 375, 1920)
 		font-weight: bold
 		font-size: 40px
 		text-align: right
 		padding-right: 10px
 		+laptop
 			width: 30%
-		+md
-			font-size: 30px
-		+sm
-			font-size: 11px
 	&__text
 		width: 50%
-		font-size: 36px
+		+css-lock($addressFontMobile, $addressText, 375, 1920)
 		padding-left: 10px
 		+laptop
 			width: 70%
-		+md
-			font-size: 26px
 		+sm
-			font-size: 11px
 			padding-left: 0
 		a
 			color: inherit

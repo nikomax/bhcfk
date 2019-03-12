@@ -2,7 +2,7 @@
 	padding: 400px 40px 0
 	position: relative
 	+sm
-		padding: 180px 40px 0
+		padding: 160px 40px 0
 	&__deco
 		z-index: -1
 		position: absolute
@@ -32,8 +32,10 @@
 		+laptop
 			max-width: 900px
 		+sm
-			margin: 0 -20px
+			max-width: 400px
 			padding-right: 0
+		+xs
+			margin: 0 -20px
 	&__social
 		display: flex
 		justify-content: center
@@ -50,14 +52,11 @@
 	border: 7px solid $inputBorderColor
 	padding: 15px
 	border-radius: 25px
-	font-size: $btnFontSizeLg
+	+css-lock($btnFontSizeMobile, $btnFontSizeLg, 275, 1920)
 	font-family: $boldFont
 	font-weight: bold
 	+placeholder-color($textColor)
-	+laptop
-		font-size: $btnFontSizeLgLaptop
 	+sm
-		font-size: $btnFontSizeMobile
 		border-width: 3px
 		border-radius: 10px
 		padding: 5px 10px

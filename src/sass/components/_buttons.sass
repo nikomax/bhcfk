@@ -5,33 +5,25 @@
 	border: 7px solid $buttonBorderColor
 	padding: 15px
 	border-radius: 25px
-	font-size: $btnFontSize
+	+css-lock($btnFontSizeMobile, $btnFontSize, 375, 1920)
 	color: $buttonColor
 	text-decoration: none
 	font-family: $boldFont
 	white-space: nowrap
 	font-weight: bold
-	+laptop
-		font-size: $btnFontSizeLaptop
 	+sm
-		font-size: $btnFontSizeMobile
 		border-width: 3px
 		border-radius: 10px
 		padding: 10px
 	&--sm
-		font-size: $btnFontSizeSm
+		+css-lock($btnFontSizeSmMobileSm, $btnFontSizeSm, 320, 1920)
 		padding: 10px 15px
 		border-width: 4px
 		border-radius: 20px
-		+laptop
-			font-size: $btnFontSizeSmLaptop
 		+sm
-			font-size: $btnFontSizeMobile
 			border-radius: 5px
 			border-width: 2px
 			padding: 3px 5px
-		+r(375)
-			font-size: $btnFontSizeSmMobile
 	&--width
 		min-width: 340px
 		+md
@@ -41,14 +33,12 @@
 	&--lg
 		padding: 25px
 		min-width: 390px
-		font-size: $btnFontSizeLg
-		+laptop
-			font-size: $btnFontSizeLgLaptop
+		+css-lock($btnFontSizeMobile, $btnFontSizeLg, 375, 1920)
 		+md
-			min-width: 200px
+			min-width: auto
+			width: 100%
 		+sm
-			min-width: 112px
-			font-size: $btnFontSizeMobile
+			width: auto
 	&--blue-border
 		border-color: $buttonBorderColorBlue
 	&--green-border

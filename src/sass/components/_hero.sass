@@ -42,13 +42,9 @@
 		+laptop
 			margin-bottom: 20px
 	&__text
-		font-size: $heroFontSize
+		+css-lock($heroFontSizeMobile, $heroFontSize, 375, 1920)
 		color: #FFFFFF
 		text-align: center
-		+laptop
-			font-size: $heroFontSizeLaptop
-		+sm
-			font-size: $heroFontSizeMobile
 	&__logo
 		max-width: 773px
 		+laptop
