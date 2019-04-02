@@ -11,14 +11,17 @@
 		margin: 35px 0
 		border-width: 6px 0
 		padding: 20px 40px
+	+xs
+		padding: 20px
 	&__title
-		font-family: $boldFont
+		font-family: $extraBoldFont
 		font-weight: bold
 		+css-lock($titleBannerMobile, $titleBanner, 375, 1920)
 		margin-bottom: 16px
 		+sm
 			margin-bottom: 24px
 	&__text
+		font-family: $boldFont
 		+css-lock($textFontSizeMobile, $textFontSize, 375, 1920)
 		max-width: 1140px
 		margin: 0 auto

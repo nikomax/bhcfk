@@ -8,7 +8,7 @@
 	+css-lock($btnFontSizeMobile, $btnFontSize, 375, 1920)
 	color: $buttonColor
 	text-decoration: none
-	font-family: $boldFont
+	font-family: $extraBoldFont
 	white-space: nowrap
 	font-weight: bold
 	+sm
@@ -20,6 +20,8 @@
 		padding: 10px 15px
 		border-width: 4px
 		border-radius: 20px
+		+r(1200)
+			border-radius: 12px
 		+sm
 			border-radius: 5px
 			border-width: 2px
@@ -61,7 +63,5 @@
 		width: 26px
 
 .info-link
-	font-size: 24px
+	+css-lock(8, 24, 375, 1920)
 	color: inherit
-	+sm
-		font-size: 8px

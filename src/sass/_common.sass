@@ -14,12 +14,14 @@ body
 	padding: 0 150px
 	max-width: 1920px
 	margin: 0 auto
+	+r(1400)
+		padding: 0 95px
 	+r(1199)
 		padding: 0 40px
 
 .section-title
 	+css-lock($titleFontSizeMobile, $titleFontSize, 375, 1920)
-	font-family: $boldFont
+	font-family: $extraBoldFont
 	font-weight: bold
 	margin-bottom: 54px
 	+md
@@ -28,7 +30,7 @@ body
 		margin-bottom: 24px
 	&--center
 		text-align: center
-		margin-bottom: 80px
+		margin-bottom: 35px
 
 .section-icon
 	margin-bottom: 30px
@@ -36,10 +38,8 @@ body
 	justify-content: center
 
 .text
-	line-height: 1.89
+	line-height: 1.7
 	+css-lock($textFontSizeSmMobile, $textFontSizeSm, 375, 1920)
-	+sm
-		line-height: 1.7
 	p + p
 		margin-top: 28px
 		+laptop

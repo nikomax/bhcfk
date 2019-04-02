@@ -57,25 +57,29 @@
 	+md
 		margin: 40px 0
 	+sm
-		align-items: flex-start
 		margin: 15px 0
 	&__title
 		width: 50%
 		+css-lock($addressFontMobile, $addressTitles, 375, 1920)
-		font-weight: bold
-		font-size: 40px
+		font-family: $extraBoldFont
 		text-align: right
-		padding-right: 10px
+		padding-right: 20px
 		+laptop
 			width: 30%
+		+sm
+			padding-right: 10px
+	&__icon
+		+css-lock(20, 50, 375, 1920)
+		.icon
+			display: block
 	&__text
 		width: 50%
 		+css-lock($addressFontMobile, $addressText, 375, 1920)
-		padding-left: 10px
+		padding-left: 20px
 		+laptop
 			width: 70%
 		+sm
-			padding-left: 0
+			padding-left: 10px
 		a
 			color: inherit
 			&:not(.info-link)
