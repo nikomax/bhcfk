@@ -36,8 +36,8 @@
 			+sm
 				margin-left: 13px
 	&__map
+		display: block
 		position: relative
-		z-index: -1
 		margin-bottom: 400px
 		padding-top: 50%
 		+r(1700)
@@ -62,7 +62,7 @@
 	+sm
 		margin: 15px 0
 	&__title
-		width: 50%
+		width: 45%
 		+css-lock($addressFontMobile, $addressTitles, 375, 1920)
 		font-family: $extraBoldFont
 		text-align: right
@@ -73,8 +73,17 @@
 			width: 25%
 			padding-right: 10px
 	&__icon
+		max-width: 50px
+		width: 100%
 		+css-lock(20, 50, 375, 1920)
+		display: flex
+		justify-content: center
+		+sm
+			max-width: 40px
+		+xs
+			max-width: 30px
 		.icon
+			max-width: 100%
 			display: block
 	&__text
 		width: 50%
